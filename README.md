@@ -4,7 +4,7 @@ Mock some text like spongebob would. mOCk SoMe TexT lIKe SpONGebOb wOuLd.
 ![alt text](http://pixel.nymag.com/imgs/daily/vulture/2017/05/16/16-spongebob-explainer.w710.h473.2x.jpg "spongemock")
 
 ## How To
-spongemock.py [-h] [-c] [-b BIAS] [-s SEED | -S STRSEED] text [text ...]
+spongemock [-h] [-c] [-b BIAS] [-s SEED | -S STRSEED] text [text ...]
 
 ### positional arguments
 `text` - the text to mock. ThE tExT tO mOCk.
