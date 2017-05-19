@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
-# spongemock.py
+# spongemock __main__.py
 # author: Noah Krim
 # email: nkrim62@gmail.com
 
+from __future__ import print_function
+
 import argparse
 import pyperclip
-import random
-import re
 import sys
 
 def main():
@@ -34,37 +33,3 @@ def init_parser():
 	seed_group.add_argument('-s', '--seed', type=parsable_seed, help='Seed for random number generator. Can be any number or string (numbers are parsed).')
 	seed_group.add_argument('-S', '--strseed', help='Seed for random number generator. Does not attempt to parse the string to a number.')
 	return parser
-
-def mock(text, diversity_bias=0.5, random_seed=None):
-	# Error handling
-	if diversity_bias < 0 or diversity_bias > 1:
-		raise ValueError('diversity_bias must be between the inclusive range [0,1]')
-	# Seed the random number generator
-	random.seed(random_seed)
-	# Mock the text
-	out = ''
-	last_was_upper = True
-	swap_chance = 0.5
-	for c in text:
-		if c.isalpha():
-			if random.random() < swap_chance:
-				last_was_upper = not last_was_upper
-				swap_chance = 0.5
-			c = c.upper() if last_was_upper else c.lower()
-			swap_chance += (1-swap_chance)*diversity_bias
-		out += c
-	return out
-
-def parsable_seed(str_seed):
-	# Try int parse
-	if re.fullmatch(r'-?\d+', str_seed):
-		return int(float(str_seed))
-	# Try float parse
-	try:
-		return float(str_seed)
-	except Exception:
-		pass
-	return str_seed
-
-if __name__ == '__main__':
-	main()
