@@ -13,7 +13,7 @@ spongemock [-h] [-c] [-b BIAS] [-s SEED | -S STRSEED] text [text ...]
 
 positional arguments
 --------------------
-`text` - the text to mock. ThE tExT tO mOCk.
+``text`` - the text to mock. ThE tExT tO mOCk.
 
 optional arguments
 ------------------
