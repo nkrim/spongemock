@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # spongemock __main__.py
 # author: Noah Krim
 # email: nkrim62@gmail.com
@@ -6,22 +7,11 @@ from __future__ import print_function
 
 import argparse
 import re
-
-from sys import stderr
-
-try:
-	from Tkinter import Tk
-except ImportError:
-	try:
-		from tkinter import Tk
-	except ImportError:
-		pass
-
-
-from .spongemock import mock
+from pyperclip import copy
+import sys
 
 def eprint(*args, **kwargs):
-	print(*args, file=stderr, **kwargs)
+	print(*args, file=sys.stderr, **kwargs)
 
 def main():
 	parser = init_parser()
@@ -34,11 +24,10 @@ def main():
 	if args.copy:
 		try:
 			copy(out)
-		except NameError:
-			eprint('Warning: '+sys.argv[0]+': could not copy to clipboard. '
-				+'Please make sure Tkinter is installed (more info https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter).')
 		except Exception:
-			eprint('Warning: '+sys.argv[0]+': could not copy to clipboard because of an unexpected error.')
+			eprint('Warning: '+sys.argv[0]+': could not copy the output to the clipboard because of an unexpected error. '
+				+'If using Linux, pleaes make sure you have all the proper modules installed for pyperclip '
+				+'(more info: https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter).')
 	print(out)
 
 def init_parser():
@@ -66,12 +55,11 @@ def parsable_seed(str_seed):
 		pass
 	return str_seed
 
-def copy(text):
-	r = Tk()
-	r.withdraw()
-	r.clipboard_clear()
-	r.clipboard_append(text)
-	r.destroy()
-
 if __name__ == '__main__':
+	if __package__ is None:
+		from os import path
+		sys.path.append( path.dirname(path.abspath(__file__) ) )
+		from spongemock import mock
+	else:
+		from .spongemock import mock
 	main()
