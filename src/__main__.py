@@ -20,7 +20,7 @@ def main():
 		out = mock(' '.join(args.text), args.bias, args.seed or args.strseed or None)
 	except Exception as e:
 		eprint('Error: '+sys.argv[0]+': '+str(e))
-		exit(1)
+		return 1
 	if args.copy:
 		try:
 			copy(out)
@@ -29,6 +29,7 @@ def main():
 				+'If using Linux, pleaes make sure you have all the proper modules installed for pyperclip '
 				+'(more info: https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter).')
 	print(out)
+	return 0
 
 def init_parser():
 	parser = argparse.ArgumentParser(description='Mock some text like spongebob would. mOCk SoMe TexT lIKe SpONGebOb wOuLd.')
@@ -63,3 +64,5 @@ if __name__ == '__main__':
 	else:
 		from .spongemock import mock
 	main()
+else:
+	from .spongemock import mock 

@@ -46,6 +46,9 @@ optional arguments
 
 Patch Notes
 ===========
+v0.2.1
+------
+- Fixed program-breaking error
 v0.2
 ----
 - Fixed up error messaging when using the ``-c`` copy option
