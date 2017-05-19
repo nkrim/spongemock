@@ -16,12 +16,11 @@ or (for python3 specifically)
 
 ``pip3 install spongemock``
 
-If you are having troube with the ``-c`` copy option (especially on Linux), please refer to |pyperclipinstallation|_.
+If you are having troube with the ``-c`` copy option (especially on Linux), please refer to |pyperclipinst|_.
 
-.. _pyperclipinstallation: https://github.com/asweigart/pyperclip
+.. _pyperclipinst: https://github.com/asweigart/pyperclip
 
-.. |pyperclipinstallation| replace:: *pyperclip*'s installation instructions
-
+.. |pyperclipinst| replace:: *pyperclip*'s installation instructions
 
 
 How To Use
@@ -43,15 +42,3 @@ optional arguments
 ``-s SEED``, ``--seed SEED`` - seed for random number generator. Can be any number or string (numbers are parsed).
 
 ``-S STRSEED``, ``--strseed STRSEED`` - seed for random number generator. Does not attempt to parse the string to a number.
-
-Patch Notes
-===========
-v0.3.3
-------
-- Fixed program-breaking error
-- Fixed packaging errors
-v0.2
-----
-- Fixed up error messaging when using the ``-c`` copy option
-- Added a "How to Install" section to the README
-- Fixed some README issues w/ spelling and semantics
