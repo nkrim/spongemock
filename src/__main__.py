@@ -5,11 +5,23 @@
 from __future__ import print_function
 
 import argparse
-import pyperclip
 import re
-import sys
+
+from sys import stderr
+
+try:
+	from Tkinter import Tk
+except ImportError:
+	try:
+		from tkinter import Tk
+	except ImportError:
+		pass
+
 
 from .spongemock import mock
+
+def eprint(*args, **kwargs):
+	print(*args, file=stderr, **kwargs)
 
 def main():
 	parser = init_parser()
@@ -17,10 +29,16 @@ def main():
 	try:
 		out = mock(' '.join(args.text), args.bias, args.seed or args.strseed or None)
 	except Exception as e:
-		print('Error: '+sys.argv[0]+': '+str(e), file=sys.stderr)
+		eprint('Error: '+sys.argv[0]+': '+str(e))
 		exit(1)
 	if args.copy:
-		pyperclip.copy(out)
+		try:
+			copy(out)
+		except NameError:
+			eprint('Warning: '+sys.argv[0]+': could not copy to clipboard. '
+				+'Please make sure Tkinter is installed (more info https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter).')
+		except Exception:
+			eprint('Warning: '+sys.argv[0]+': could not copy to clipboard because of an unexpected error.')
 	print(out)
 
 def init_parser():
@@ -47,6 +65,13 @@ def parsable_seed(str_seed):
 	except Exception:
 		pass
 	return str_seed
+
+def copy(text):
+	r = Tk()
+	r.withdraw()
+	r.clipboard_clear()
+	r.clipboard_append(text)
+	r.destroy()
 
 if __name__ == '__main__':
 	main()
