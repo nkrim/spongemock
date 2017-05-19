@@ -48,5 +48,6 @@ Patch Notes
 ===========
 v0.2
 ----
+- Fixed up error messaging when using the ``-c`` copy option
 - Added a "How to Install" section to the README
 - Fixed some README issues w/ spelling and semantics
