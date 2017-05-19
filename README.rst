@@ -16,7 +16,13 @@ or (for python3 specifically)
 
 ``pip3 install spongemock``
 
-If you are using Linux or Ubuntu for Windows, make sure `*Tkinter* is installed <https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter>`_ in order to use the ``-c`` option to copy to the clipboard.
+If you are using Linux or Ubuntu for Windows, make sure |tkinterinstall|_ in order to use the ``-c`` option to copy to the clipboard.
+
+.. _tkinterinstall: https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter
+
+.. |tkinterinstall| replace:: *Tkinter* is installed
+
+
 
 How To Use
 ==========
