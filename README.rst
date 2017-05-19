@@ -10,10 +10,12 @@ spongemock
 
 How to Install
 ==============
-.. line-block::
-	``pip install spongemock``
-	or (for python3 specifically)
-	``pip3 install spongemock``
+``pip install spongemock``
+
+or (for python3 specifically)
+
+``pip3 install spongemock``
+
 If you are using Linux or Ubuntu for Windows, make sure `*Tkinter* is installed <https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter>`_ in order to use the ``-c`` option to copy to the clipboard.
 
 How To Use
