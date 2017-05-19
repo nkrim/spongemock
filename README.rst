@@ -5,9 +5,6 @@ spongemock
 	You: mOCk SoMe TexT lIKe SpONGebOb wOuLd.
 
 .. image:: http://pixel.nymag.com/imgs/daily/vulture/2017/05/16/16-spongebob-explainer.w710.h473.2x.jpg
-	:height: 548px
-	:width: 822px
-	:scale: 50%
 	:alt: spongemock
 
 How To Use
