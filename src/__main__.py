@@ -9,7 +9,7 @@ import pyperclip
 import re
 import sys
 
-from spongemock import mock
+from .spongemock import mock
 
 def main():
 	parser = init_parser()
