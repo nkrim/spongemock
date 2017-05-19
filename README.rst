@@ -1,10 +1,10 @@
 spongemock
 ##########
-Me: Mock some text like spongebob would.  
+Me: Mock some text like spongebob would. 
 You: mOCk SoMe TexT lIKe SpONGebOb wOuLd.
 
 .. image:: http://pixel.nymag.com/imgs/daily/vulture/2017/05/16/16-spongebob-explainer.w710.h473.2x.jpg
-   :scale: 50 %
+   :scale: 25 %
    :alt: spongemock
 
 How To Use
