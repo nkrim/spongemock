@@ -46,8 +46,8 @@ optional arguments
 
 Patch Notes
 ===========
-v0.2.1
-------
+v0.3
+----
 - Fixed program-breaking error
 v0.2
 ----
