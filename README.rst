@@ -16,11 +16,11 @@ or (for python3 specifically)
 
 ``pip3 install spongemock``
 
-If you are using Linux or Ubuntu for Windows, make sure |tkinterinstall|_ in order to use the ``-c`` option to copy to the clipboard.
+If you are having troube with the ``-c`` copy option (especially on Linux), please refer to |pyperclipinstallation|_.
 
-.. _tkinterinstall: https://tkinter.unpythonic.net/wiki/How_to_install_Tkinter
+.. _pyperclipinstallation: https://github.com/asweigart/pyperclip
 
-.. |tkinterinstall| replace:: *Tkinter* is installed
+.. |pyperclipinstallation| replace:: *pyperclip*'s installation instructions
 
 
 
@@ -48,6 +48,5 @@ Patch Notes
 ===========
 v0.2
 ----
-- Fix for clipboard copying issue on linux / bash for windows (switched from pyperclip to tkinter)
 - Added a "How to Install" section to the README
 - Fixed some README issues w/ spelling and semantics
