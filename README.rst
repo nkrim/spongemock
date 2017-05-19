@@ -46,7 +46,7 @@ optional arguments
 
 Patch Notes
 ===========
-v0.3.1
+v0.3.3
 ------
 - Fixed program-breaking error
 - Fixed packaging errors

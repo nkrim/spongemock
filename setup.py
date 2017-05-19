@@ -14,7 +14,7 @@ CLASSIFIERS = []
 
 # Dynamic info
 # ------------
-VERSION 			= '0.3.1'
+VERSION 			= '0.3.3'
 CLASSIFIERS 		+= [
 						'Development Status :: 3 - Alpha',
 					]
