@@ -6,7 +6,10 @@ from __future__ import print_function
 
 import argparse
 import pyperclip
+import re
 import sys
+
+from spongemock import mock
 
 def main():
 	parser = init_parser()
@@ -33,3 +36,17 @@ def init_parser():
 	seed_group.add_argument('-s', '--seed', type=parsable_seed, help='Seed for random number generator. Can be any number or string (numbers are parsed).')
 	seed_group.add_argument('-S', '--strseed', help='Seed for random number generator. Does not attempt to parse the string to a number.')
 	return parser
+
+def parsable_seed(str_seed):
+	# Try int parse
+	if re.match(r'^-?\d+$', str_seed):
+		return int(float(str_seed))
+	# Try float parse
+	try:
+		return float(str_seed)
+	except Exception:
+		pass
+	return str_seed
+
+if __name__ == '__main__':
+	main()

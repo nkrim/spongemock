@@ -3,7 +3,6 @@
 # email: nkrim62@gmail.com
 
 import random
-import re
 
 def mock(text, diversity_bias=0.5, random_seed=None):
 	# Error handling
@@ -24,14 +23,3 @@ def mock(text, diversity_bias=0.5, random_seed=None):
 			swap_chance += (1-swap_chance)*diversity_bias
 		out += c
 	return out
-
-def parsable_seed(str_seed):
-	# Try int parse
-	if re.fullmatch(r'-?\d+', str_seed):
-		return int(float(str_seed))
-	# Try float parse
-	try:
-		return float(str_seed)
-	except Exception:
-		pass
-	return str_seed
