@@ -22,7 +22,7 @@ CLASSIFIERS 		+= [
 # Package/Dependency info
 # ---------------
 PACKAGES			= [	'spongemock'	]
-PACKAGE_DIR 		= {	'passwordgen': 'src'	}
+PACKAGE_DIR 		= {	'spongemock': 'src'	}
 DATA_FILES			= [ ('', ['README.rst','LICENSE']), ]
 INSTALL_REQUIRES 	= [	'pyperclip>=1.5.27' ]
 
