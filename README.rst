@@ -16,12 +16,6 @@ or (for python3 specifically)
 
 ``pip3 install spongemock``
 
-If you are having troube with the ``-c`` copy option (especially on Linux), please refer to |pyperclipinst|_.
-
-.. _pyperclipinst: https://github.com/asweigart/pyperclip
-
-.. |pyperclipinst| replace:: *pyperclip*'s installation instructions
-
 
 How To Use
 ==========
@@ -37,8 +31,19 @@ optional arguments
 
 ``-c``, ``--copy`` - copy the mocked text to the clipboard.
  
-``-b BIAS``, ``--bias BIAS`` - this bias is used to succesively increase the chance of swapping from the previously-mocked case. A value of ``0`` will ensure the chance is always 50/50, and a value of ``1`` will ensure that after the first random choice the capitalization perfectly oscilates. Default is ``0.5``.
+``-b BIAS``, ``--bias BIAS`` - this bias is used to successively increase the chance of swapping from the previously-mocked case. A value of ``0`` will ensure the chance is always 50/50, and a value of ``1`` will ensure that after the first random choice the capitalization perfectly oscilates. Default is ``0.5``.
 
 ``-s SEED``, ``--seed SEED`` - seed for random number generator. Can be any number or string (numbers are parsed).
 
 ``-S STRSEED``, ``--strseed STRSEED`` - seed for random number generator. Does not attempt to parse the string to a number.
+
+
+Use as a Library
+----------------
+``from spongemock import spongemock``
+
+for use as ``spongemock.mock()``, or
+
+``from spongemock.spongemock import mock``
+
+Pass the ``text``, and optional ``diversity_bias`` or ``random_seed`` keyword arguments, to the ``mock()`` function.
