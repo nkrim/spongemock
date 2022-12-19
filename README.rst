@@ -31,7 +31,7 @@ optional arguments
 
 ``-c``, ``--copy`` - copy the mocked text to the clipboard.
  
-``-b BIAS``, ``--bias BIAS`` - this bias is used to succesively increase the chance of swapping from the previously-mocked case. A value of ``0`` will ensure the chance is always 50/50, and a value of ``1`` will ensure that after the first random choice the capitalization perfectly oscilates. Default is ``0.5``.
+``-b BIAS``, ``--bias BIAS`` - this bias is used to successively increase the chance of swapping from the previously-mocked case. A value of ``0`` will ensure the chance is always 50/50, and a value of ``1`` will ensure that after the first random choice the capitalization perfectly oscilates. Default is ``0.5``.
 
 ``-s SEED``, ``--seed SEED`` - seed for random number generator. Can be any number or string (numbers are parsed).
 

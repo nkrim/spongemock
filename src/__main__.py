@@ -27,7 +27,7 @@ def init_parser():
 	parser = argparse.ArgumentParser(description='Mock some text like spongebob would. mOCk SoMe TexT lIKe SpONGebOb wOuLd.')
 	parser.add_argument('text', nargs='+', help='the text to mock. ThE tExT tO mOCk.')
 	parser.add_argument('-b', '--bias', type=float, default=0.5, 
-		help='This bias is used to succesively increase the chance of swapping from the previously-mocked case. '
+		help='This bias is used to successively increase the chance of swapping from the previously-mocked case. '
 			+'A value of `0` will ensure the chance is always 50/50, '
 			+'and a value of `1` will ensure that after the first random choice the capitalization perfectly oscilates. '
 			+'Default is `0.5`.')
