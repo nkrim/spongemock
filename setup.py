@@ -24,7 +24,6 @@ CLASSIFIERS 		+= [
 PACKAGES			= [	'spongemock'	]
 PACKAGE_DIR 		= {	'spongemock': 'src'	}
 DATA_FILES			= [ ('', ['README.rst','LICENSE']), ]
-INSTALL_REQUIRES 	= [	'pyperclip>=1.5.27' ]
 
 # Static info
 # -----------
@@ -69,6 +68,5 @@ setup(
 	packages=PACKAGES,
 	package_dir=PACKAGE_DIR,
 	data_files=DATA_FILES,
-	install_requires=INSTALL_REQUIRES,
 	classifiers=CLASSIFIERS,
 	zip_safe=ZIP_SAFE )

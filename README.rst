@@ -16,12 +16,6 @@ or (for python3 specifically)
 
 ``pip3 install spongemock``
 
-If you are having troube with the ``-c`` copy option (especially on Linux), please refer to |pyperclipinst|_.
-
-.. _pyperclipinst: https://github.com/asweigart/pyperclip
-
-.. |pyperclipinst| replace:: *pyperclip*'s installation instructions
-
 
 How To Use
 ==========
