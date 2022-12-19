@@ -36,3 +36,14 @@ optional arguments
 ``-s SEED``, ``--seed SEED`` - seed for random number generator. Can be any number or string (numbers are parsed).
 
 ``-S STRSEED``, ``--strseed STRSEED`` - seed for random number generator. Does not attempt to parse the string to a number.
+
+
+Use as a Library
+----------------
+``from spongemock import spongemock``
+
+for use as ``spongemock.mock()``, or
+
+``from spongemock.spongemock import mock``
+
+Pass the ``text``, and optional ``diversity_bias`` or ``random_seed`` keyword arguments, to the ``mock()`` function.
