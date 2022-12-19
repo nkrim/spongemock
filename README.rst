@@ -47,3 +47,8 @@ for use as ``spongemock.mock()``, or
 ``from spongemock.spongemock import mock``
 
 Pass the ``text``, and optional ``diversity_bias`` or ``random_seed`` keyword arguments, to the ``mock()`` function.
+
+
+Contributors
+------------
+A big thanks to `dgw <https://github.com/dgw>`_ for their contributions.
